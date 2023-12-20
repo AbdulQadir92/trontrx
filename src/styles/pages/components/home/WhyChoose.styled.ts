@@ -94,7 +94,7 @@ export const Sections = styled.div`
 export const TopSection = styled.div`
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 
     > div {
         width: 40%;
@@ -108,6 +108,7 @@ export const TopSection = styled.div`
 export const CentralSection = styled.div`
     display: grid;
     grid-template-columns: calc(50% - 118px) 236px calc(50% - 118px);
+    align-items: center;
 
     > div:first-child {
         display: flex;
@@ -355,7 +356,7 @@ export const Section = styled.div`
     &#whySection3 {
         flex-direction: column-reverse;
         align-items: center;
-        margin-top: -15px;
+        /* margin-top: -15px; */
 
         opacity: 0;
         &.animate {
@@ -534,7 +535,7 @@ export const MobileSection = styled.div`
     }
 
     p {
-        /* font-family: 'PT Sans'; */
+        /* font-family: 'PT Sans', sans-serif; */
         font-family: "Manrope", sans-serif;
         font-style: normal;
         font-weight: 400;

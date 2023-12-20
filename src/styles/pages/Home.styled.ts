@@ -11,7 +11,7 @@ export const UpArrow = styled.div`
     right: 30px;
     z-index: 99;
 
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 
@@ -22,18 +22,22 @@ export const UpArrow = styled.div`
     border-radius: 50%;
     cursor: pointer;
 
+    &.shown {
+        display: flex;
+    }
+
     img {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
 
     @media (max-width: 576px) {
         right: 15px;
         padding: 5px;
 
-        img {
+        /* img {
             width: 20px;
             height: 20px;
-        }
+        } */
     }
 `

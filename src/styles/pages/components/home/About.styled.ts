@@ -73,13 +73,14 @@ export const Paragraphs = styled.ul`
   list-style-type: none;
 
   > li {
-    font-family: 'PT Sans', sans-serif;
+    /* font-family: 'PT Sans', sans-serif; */
+    font-family: 'Manrope', sans-serif;
     font-style: normal;
     text-align: justify;
     text-justify: inter-word;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 115%;
+    font-size: 15px;
+    line-height: 120%;
     letter-spacing: 0.05em;
     color: ${({ theme }) => theme.colors.blackFont};
 
@@ -111,7 +112,6 @@ export const Paragraphs = styled.ul`
 
   @media (max-width: 1200px) {
     > li {
-      font-size: 16px;
       text-align: center;
     }
   }

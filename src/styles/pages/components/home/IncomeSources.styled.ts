@@ -56,7 +56,6 @@ export const IncomeSourcesStyled = styled.section`
         }
     }
 
-
     @media (max-width: 768px) {
         h1 {
             font-size: 32.6px;
@@ -126,11 +125,13 @@ export const Card = styled.div`
         width: 100%;
     }
   
-  :hover {
-    transition-duration: 500ms;
-    background: linear-gradient(to top, ${({ theme }) => theme.colors.cardBgFilled} 50%, ${({ theme }) => theme.colors.whiteBg} 50%) bottom;
-    background-size: 100% 200%;
-  }
+    @media (min-width: 993px) {
+        &:hover {
+            transition-duration: 400ms;
+            background: linear-gradient(to top, ${({ theme }) => theme.colors.cardBgFilled} 50%, ${({ theme }) => theme.colors.whiteBg} 50%) bottom;
+            background-size: 100% 200%;
+        }
+    }
 `
 
 export const CardTop = styled.div`

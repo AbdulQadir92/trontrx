@@ -72,6 +72,20 @@ export const LogoSectionFooter = styled.div`
         }
     }
 
+    @media (max-width: 992px) {
+        > div:nth-child(2) {
+            h1 {
+                font-size: 25px;
+                line-height: 32px;
+            }
+
+            p {
+                font-size: 11px;
+                line-height: 14px;
+            }
+        }
+    }
+
     @media (max-width: 300px) {
         margin-bottom: 70px;
 

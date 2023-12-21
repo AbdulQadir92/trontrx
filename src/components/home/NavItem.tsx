@@ -19,9 +19,15 @@ interface NavItemProps {
 const NavItem: React.FC<NavItemProps> = ({ text, link }) => {
   return (
     <li>
-      <Link href={link} scroll={true}>
-        <Text>{text}</Text>
-      </Link>
+      {link === "/dashboard" ? (
+        <Link href={link}>
+          <Text>{text}</Text>
+        </Link>
+      ) : (
+        <a href={link}>
+          <Text>{text}</Text>
+        </a>
+      )}
     </li>
   )
 }

@@ -157,11 +157,27 @@ export const TabHeader = styled.div`
     @media (max-width: 992px) {
         padding: 28px 0;
         text-align: center;
-        border-bottom: 0.5px solid #9C9C9C;
+        border-bottom: 1px solid #9C9C9C;
+
+        &.active {
+            border-bottom: 1px solid ${({ theme }) => theme.colors.mainYellow};
+        }
     }
 `
 
 export const TabBodies = styled.div`
+    transform: translateY(20vh);
+    &.animate {
+        // animation
+        animation-name: accordion;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        @keyframes accordion {
+            0% {transform: translateY(20vh);}
+            100% {transform: translateY(0);}
+        }
+    }
+
     @media (max-width: 992px) {
         padding-left: 25px;
         padding-right: 25px;
@@ -184,7 +200,7 @@ export const TabBody = styled.div`
 `
 
 export const Accordion = styled.div`
-    transform: translateY(20vh);
+    /* transform: translateY(20vh);
     &.animate {
         // animation
         animation-name: accordion;
@@ -194,7 +210,7 @@ export const Accordion = styled.div`
             0% {transform: translateY(20vh);}
             100% {transform: translateY(0);}
         }
-    }
+    } */
 `
 
 export const AccordionTop = styled.div`

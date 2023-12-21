@@ -16,6 +16,8 @@ const FAQs = () => {
     }
     const [faqsHeadingClass, setFaqsHeadingClass] = useState(false);
     const [tabHeadersClass, setTabHeadersClass] = useState(false);
+    const [tabBodiesClass, setTabBodiesClass] = useState(false);
+
     // general
     const [question1Class, setQuestion1Class] = useState(false);
     // pre ico
@@ -26,14 +28,18 @@ const FAQs = () => {
     const [question4Class, setQuestion4Class] = useState(false);
     // legal
     const [question5Class, setQuestion5Class] = useState(false);
+
     useEffect(() => {
         const faqsHeading = document.querySelectorAll('.faqsHeading');
         const tabHeaders = document.querySelectorAll('.tabHeaders');
-        const question1 = document.querySelectorAll('.question1');
-        const question2 = document.querySelectorAll('.question2');
-        const question3 = document.querySelectorAll('.question3');
-        const question4 = document.querySelectorAll('.question4');
-        const question5 = document.querySelectorAll('.question5');
+        const tabBodies = document.querySelectorAll('.tabBodies');
+
+        // const question1 = document.querySelectorAll('.question1');
+        // const question2 = document.querySelectorAll('.question2');
+        // const question3 = document.querySelectorAll('.question3');
+        // const question4 = document.querySelectorAll('.question4');
+        // const question5 = document.querySelectorAll('.question5');
+
         document.addEventListener('scroll', () => {
             if (!faqsHeadingClass) {
                 animate(setFaqsHeadingClass, faqsHeading[0]);
@@ -41,30 +47,35 @@ const FAQs = () => {
             if (!tabHeadersClass) {
                 animate(setTabHeadersClass, tabHeaders[0]);
             }
-            if (!question1Class) {
-                animate(setQuestion1Class, question1[0]);
+            if (!tabBodiesClass) {
+                animate(setTabBodiesClass, tabBodies[0]);
             }
-            if (!question2Class) {
-                animate(setQuestion2Class, question2[0]);
-            }
-            if (!question3Class) {
-                animate(setQuestion3Class, question3[0]);
-            }
-            if (!question4Class) {
-                animate(setQuestion4Class, question4[0]);
-            }
-            if (!question5Class) {
-                animate(setQuestion5Class, question5[0]);
-            }
+            // if (!question1Class) {
+            //     animate(setQuestion1Class, question1[0]);
+            // }
+            // if (!question2Class) {
+            //     animate(setQuestion2Class, question2[0]);
+            // }
+            // if (!question3Class) {
+            //     animate(setQuestion3Class, question3[0]);
+            // }
+            // if (!question4Class) {
+            //     animate(setQuestion4Class, question4[0]);
+            // }
+            // if (!question5Class) {
+            //     animate(setQuestion5Class, question5[0]);
+            // }
         })
     })
 
     const [tabClass, setTabClass] = useState(1);
     const [answerClass, setAnswerClass] = useState(1);
+
     const toggleTab = (index: number) => {
         setTabClass(index);
         setAnswerClass(1);
     }
+
     const toggleAnswer = (index: number) => {
         setAnswerClass(index);
     }
@@ -82,7 +93,7 @@ const FAQs = () => {
                     <TabHeader onClick={() => toggleTab(4)} className={tabClass === 4 ? "active" : ""}>{CONTENT.faqs.tabs[3].title}</TabHeader>
                     <TabHeader onClick={() => toggleTab(5)} className={tabClass === 5 ? "active" : ""}>{CONTENT.faqs.tabs[4].title}</TabHeader>
                 </TabHeaders>
-                <TabBodies>
+                <TabBodies className={`tabBodies ${tabBodiesClass ? 'animate' : ''}`}>
 
                     {/* General Tab */}
                     <TabBody className={tabClass === 1 ? "active" : ""}>

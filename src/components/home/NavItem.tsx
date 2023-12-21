@@ -19,7 +19,7 @@ interface NavItemProps {
 const NavItem: React.FC<NavItemProps> = ({ text, link }) => {
   return (
     <li>
-      <Link href={link}>
+      <Link href={link} scroll={true}>
         <Text>{text}</Text>
       </Link>
     </li>

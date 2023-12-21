@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import Main from '@/components/common/Main'
-
-const inter = Inter({ subsets: ['latin'] })
+// import { PT_Sans, Poppins, Manrope } from "next/font/google"
 
 export const metadata: Metadata = {
   title: 'Tron TRX',
@@ -19,9 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Google fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Poppins:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Poppins:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" /> */}
 
         {/* favicon */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -32,11 +30,11 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </head>
-      <body className={inter.className}>
+      <body>
         <Main>
           {children}
         </Main>
       </body>
-    </html>
+    </html >
   )
 }

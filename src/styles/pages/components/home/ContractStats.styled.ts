@@ -75,7 +75,8 @@ export const StatsLeft = styled.div`
             font-family: 'Poppins', sans-serif;
             font-style: normal;
             font-weight: 800;
-            font-size: 24px;
+            /* font-size: 24px; */
+            font-size: 30px;
             line-height: 114.5%;
             /* or 27px */
             letter-spacing: 0.01em;
@@ -104,6 +105,13 @@ export const StatsLeft = styled.div`
     @media (max-width: 992px) {
         margin: 20px 0;
         width: 100%;
+
+        > div {
+
+            h2 {
+                font-size: 24px;
+            }
+        }
     }
 
     @media (min-width: 768px) and (max-width: 992px) {

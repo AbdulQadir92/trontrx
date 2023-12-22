@@ -37,8 +37,8 @@ export default function Home() {
     <main>
       <Navbar />
       <TopSection />
-      {/* <ContractStats />
-      <AboutDivider /> */}
+      <ContractStats />
+      <AboutDivider />
       <About />
       <AboutDivider />
       <WhyChoose />

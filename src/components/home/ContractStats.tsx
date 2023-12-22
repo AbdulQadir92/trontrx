@@ -5,17 +5,17 @@ import { CONTENT } from '@/content/content'
 
 const ContractStats = () => {
 
-    // const animate = (setAnimationClass: any, element: any) => {
-    //     const elementBottomPosition = element.getBoundingClientRect().top - window.innerHeight;
-    //     // console.log(elementBottomPosition, 'stats');
-    //     if (elementBottomPosition <= 0 && elementBottomPosition >= -100) {
-    //         // console.log('animated');
-    //         setAnimationClass(true);
-    //     }
-    //     if (elementBottomPosition > 50) {
-    //         setAnimationClass(false);
-    //     }
-    // }
+    const animate = (setAnimationClass: any, element: any) => {
+        const elementBottomPosition = element.getBoundingClientRect().top - window.innerHeight;
+        // console.log(elementBottomPosition, 'stats');
+        if (elementBottomPosition <= 0 && elementBottomPosition >= -100) {
+            // console.log('animated');
+            setAnimationClass(true);
+        }
+        if (elementBottomPosition > 50) {
+            setAnimationClass(false);
+        }
+    }
     const [headingClass, setHeadingClass] = useState(false);
     const [statsClass, setStatsClass] = useState(false);
     useEffect(() => {
@@ -23,18 +23,18 @@ const ContractStats = () => {
         const stats = document.querySelectorAll('.stats');
         document.addEventListener('scroll', () => {
             if (!headingClass) {
-                // animate(setHeadingClass, heading[0]);
+                animate(setHeadingClass, heading[0]);
             }
             if (!statsClass) {
-                // animate(setStatsClass, stats[0]);
-                // animate(setStatsClass, stats[1]);
+                animate(setStatsClass, stats[0]);
+                animate(setStatsClass, stats[1]);
             }
         })
     }, [])
 
     return (
         <ContractStatsStyled>
-            <StatsLeft>
+            <StatsLeft className={`contStatsHeading ${headingClass ? 'animate' : ''}`}>
                 <div>
                     <img src="/assets/images/home/contractStats/arrows-icon.svg" alt="..." />
                     <h2>Buy Trx</h2>
@@ -42,7 +42,7 @@ const ContractStats = () => {
                 <img src="/assets/images/home/contractStats/right-arrow-icon.svg" alt="..." />
             </StatsLeft>
             <StatsRight>
-                <iframe
+                {/* <iframe
                     width="100%"
                     height="100%"
                     frameBorder='none'
@@ -50,8 +50,8 @@ const ContractStats = () => {
                     allow="camera"
                     src="https://widget.changelly.com?from=*&to=*&amount=100&address=&fromDefault=usd&toDefault=trx&merchant_id=WRDLy9l8o7fykC8I&payment_id=&v=3&type=no-rev-share&color=f9861b&headerId=1&logo=hide&buyButtonTextId=1"
                 >Can't load widget
-                </iframe>
-                {/* <div className={`stats ${statsClass ? 'animate' : ''}`}>
+                </iframe> */}
+                <div className={`stats ${statsClass ? 'animate' : ''}`}>
                     <Section>
                         <div>
                             <h2>{CONTENT.contractStats.stats[0].title}</h2>
@@ -81,7 +81,7 @@ const ContractStats = () => {
                             <p>{CONTENT.contractStats.stats[3].desc}</p>
                         </div>
                     </Section>
-                </div> */}
+                </div>
             </StatsRight>
         </ContractStatsStyled>
     )

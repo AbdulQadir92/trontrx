@@ -17,6 +17,7 @@ interface NavItemProps {
 }
 
 const NavItem: React.FC<NavItemProps> = ({ text, link }) => {
+
   return (
     <li>
       {link === "/dashboard" ? (

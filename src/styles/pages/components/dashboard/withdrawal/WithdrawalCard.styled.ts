@@ -31,6 +31,7 @@ export const WithdrawalCardStyled = styled.div`
 `
 
 export const InfoButton = styled(YellowButton1)`    
+    cursor: initial;
 
     @media (max-width: 992px) {
         margin-top: 22px;
@@ -366,7 +367,7 @@ export const WithdrawButton = styled.div`
     transform: scale(0);
     &.animate {
         // animation
-        animation: withdrawButton 2s ease 0.25s 1 normal forwards;
+        animation: withdrawButton 1s ease 0.25s 1 normal forwards;
         @keyframes withdrawButton {
             0% {transform: scale(0);}
             100% {transform: scale(1);}
@@ -397,7 +398,7 @@ export const WithdrawButton = styled.div`
     @media (max-width: 992px) and (min-width: 601px) {
         transform: scale(0);
         // animation
-        animation: withdrawButton 2s ease 0.25s 1 normal forwards;
+        animation: withdrawButton 1s ease 0.25s 1 normal forwards;
         @keyframes withdrawButton {
             0% {transform: scale(0);}
             100% {transform: scale(1);}
@@ -408,7 +409,7 @@ export const WithdrawButton = styled.div`
         transform: scale(0);
         &.animate {
         // animation
-            animation: depositButton 2s ease 0.25s 1 normal forwards;
+            animation: depositButton 1s ease 0.25s 1 normal forwards;
             @keyframes depositButton {
                 0% {transform: scale(0);}
                 100% {transform: scale(1);}
@@ -425,7 +426,7 @@ export const ConnectWalletButton = styled.div`
     transform: scale(0);
     &.animate {
         // animation
-        animation: withdrawButton 2s ease 0.25s 1 normal forwards;
+        animation: withdrawButton 1s ease 0.25s 1 normal forwards;
         @keyframes withdrawButton {
             0% {transform: scale(0);}
             100% {transform: scale(1);}
@@ -456,7 +457,7 @@ export const ConnectWalletButton = styled.div`
     @media (max-width: 992px) and (min-width: 601px) {
         transform: scale(0);
         // animation
-        animation: withdrawButton 2s ease 0.25s 1 normal forwards;
+        animation: withdrawButton 1s ease 0.25s 1 normal forwards;
         @keyframes withdrawButton {
             0% {transform: scale(0);}
             100% {transform: scale(1);}
@@ -467,7 +468,7 @@ export const ConnectWalletButton = styled.div`
         transform: scale(0);
         &.animate {
         // animation
-            animation: depositButton 2s ease 0.25s 1 normal forwards;
+            animation: depositButton 1s ease 0.25s 1 normal forwards;
             @keyframes depositButton {
                 0% {transform: scale(0);}
                 100% {transform: scale(1);}

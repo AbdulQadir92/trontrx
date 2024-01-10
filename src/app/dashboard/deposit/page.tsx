@@ -1,10 +1,14 @@
 "use client"
+import DepositCard from "@/components/dashboard/deposit/DepositCard"
 
 
-const page = () => {
+const Deposit = () => {
+
     return (
-        <div>Deposit</div>
+        <>
+            <DepositCard />
+        </>
     )
 }
 
-export default page
+export default Deposit

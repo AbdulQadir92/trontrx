@@ -323,6 +323,7 @@ export const CopyButton = styled.button`
   width: 89.69px;
   height: 49.47px;
   background: #000000;
+  border: none;
   border-radius: 4.19249px;
 
   // animation

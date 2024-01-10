@@ -20,6 +20,7 @@ export const DepositCardStyled = styled.div`
 `
 
 export const ContributionButton = styled(YellowButton1)`
+  cursor: initial;
 
   @media (max-width: 576px) {
     font-size: 13px;
@@ -496,7 +497,7 @@ export const DepositButton = styled.div`
     transform: scale(0);
     &.animate {
       // animation
-      animation: depositButton 2s ease 0.25s 1 normal forwards;
+      animation: depositButton 1s ease 0.25s 1 normal forwards;
       @keyframes depositButton {
         0% {
           transform: scale(0);
@@ -511,7 +512,7 @@ export const DepositButton = styled.div`
   @media (max-width: 992px) and (min-width: 601px) {
     transform: scale(0);
     // animation
-    animation: depositButton 2s ease 0.25s 1 normal forwards;
+    animation: depositButton 1s ease 0.25s 1 normal forwards;
     @keyframes depositButton {
       0% {
         transform: scale(0);
@@ -526,7 +527,7 @@ export const DepositButton = styled.div`
     transform: scale(0);
     &.animate {
       // animation
-      animation: depositButton 2s ease 0.25s 1 normal forwards;
+      animation: depositButton 1s ease 0.25s 1 normal forwards;
       @keyframes depositButton {
         0% {
           transform: scale(0);

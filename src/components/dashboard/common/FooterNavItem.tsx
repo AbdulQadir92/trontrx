@@ -14,15 +14,23 @@ const Button = styled.button`
 
 interface FooterNavItemProps {
     text: string,
-    link: string
+    link: string,
+    isSidebar?: boolean
 }
 
-const FooterNavItem: React.FC<FooterNavItemProps> = ({ text, link }) => {
+const FooterNavItem: React.FC<FooterNavItemProps> = ({ text, link, isSidebar }) => {
+    const router = useRouter();
 
-    const router = useRouter()
+    const toggleSidebarMobile = () => {
+        const sidebarMobile = document.querySelector('#sidebarMobile') as HTMLDivElement;
+        sidebarMobile.classList.toggle('show');
+    }
 
     const handleClick = () => {
-        router.push(link)
+        if (isSidebar) {
+            toggleSidebarMobile();
+        }
+        router.push(link);
     }
 
     return (

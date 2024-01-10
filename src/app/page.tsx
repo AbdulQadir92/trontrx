@@ -21,6 +21,14 @@ import Footer from "@/components/home/Footer"
 
 export default function Home() {
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    })
+  }, [])
+
   const [showArrow, setShowArrow] = useState(false);
 
   useEffect(() => {

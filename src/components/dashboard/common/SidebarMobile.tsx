@@ -1,3 +1,4 @@
+"use client"
 import { SidebarMobileStyled, HomeButtonMobile } from "@/styles/pages/components/dashboard/SidebarMobile.styled"
 import FooterNavItem from "./FooterNavItem"
 import { CONTENT as content } from '@/content/content'
@@ -6,37 +7,36 @@ import React from "react"
 
 
 interface SidebarMobileProps {
-    sidebarClass: boolean,
     activeLink: string
 }
 
-const SidebarMobile: React.FC<SidebarMobileProps> = ({ sidebarClass, activeLink }) => {
+const SidebarMobile: React.FC<SidebarMobileProps> = ({ activeLink }) => {
     return (
-        <SidebarMobileStyled className={sidebarClass ? "show" : ""}>
+        <SidebarMobileStyled id="sidebarMobile">
             <ul>
-                <div>
+                {/* <div>
                     <img src="/assets/images/dashboard/header/dashboard.svg" alt="..." />
-                    <FooterNavItem text={'DASHBOARD'} link="/dashboard" />
-                </div>
+                    <FooterNavItem text={'DASHBOARD'} link="/dashboard/personalstats" />
+                </div> */}
                 <div className={activeLink === "currentStats" ? "active" : ""}>
                     <img src="/assets/images/dashboard/sidebar/currentStats.svg" alt="..." />
-                    <FooterNavItem text={'PERSONAL STATS'} link="/dashboard" />
+                    <FooterNavItem text={'PERSONAL STATS'} link="/dashboard/personalstats" isSidebar={true} />
                 </div>
                 <div className={activeLink === "deposit" ? "active" : ""}>
                     <img src="/assets/images/dashboard/sidebar/deposit.svg" alt="..." />
-                    <FooterNavItem text={'DEPOSIT'} link="/dashboard/deposit" />
+                    <FooterNavItem text={'DEPOSIT'} link="/dashboard/deposit" isSidebar={true} />
                 </div>
                 <div className={activeLink === "withdrawal" ? "active" : ""}>
                     <img src="/assets/images/dashboard/sidebar/withdrawl.svg" alt="..." />
-                    <FooterNavItem text={'WITHDRAWAL'} link="/dashboard/withdrawal" />
+                    <FooterNavItem text={'WITHDRAWAL'} link="/dashboard/withdrawal" isSidebar={true} />
                 </div>
                 <div className={activeLink === "tree" ? "active" : ""}>
                     <img src="/assets/images/dashboard/sidebar/tree.svg" alt="..." />
-                    <FooterNavItem text={'TREE'} link="/dashboard/tree" />
+                    <FooterNavItem text={'TREE'} link="/dashboard/tree" isSidebar={true} />
                 </div>
                 <div className={activeLink === "contractStats" ? "active" : ""}>
                     <img src="/assets/images/dashboard/sidebar/currentStats.svg" alt="..." />
-                    <FooterNavItem text={'CONTRACT STATS'} link="/dashboard/contractstats" />
+                    <FooterNavItem text={'CONTRACT STATS'} link="/dashboard/contractstats" isSidebar={true} />
                 </div>
             </ul>
             <HomeButtonMobile>

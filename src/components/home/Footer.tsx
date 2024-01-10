@@ -23,7 +23,7 @@ const Footer = () => {
                 </div>
                 <div>
                     <FooterNavItem text={CONTENT.footer.footerLinks[3]} link="#faqs" />
-                    <FooterNavItem text={CONTENT.footer.footerLinks[4]} link="dashboard" />
+                    <FooterNavItem text={CONTENT.footer.footerLinks[4]} link="dashboard/personalstats" />
                 </div>
             </Links>
             <SocialLinks>

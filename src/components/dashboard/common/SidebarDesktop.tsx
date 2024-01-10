@@ -1,3 +1,4 @@
+"use client"
 import { SidebarDesktopStyled, LinkStyled } from "@/styles/pages/components/dashboard/SidebarDesktop.styled"
 import FooterNavItem from "./FooterNavItem"
 import React from "react"
@@ -13,7 +14,7 @@ const SidebarDesktop: React.FC<SidebarMobileProps> = ({ activeLink }) => {
             <ul>
                 <LinkStyled className={activeLink === "currentStats" ? "active" : ""}>
                     <img src="/assets/images/dashboard/sidebar/currentStats.svg" alt="..." />
-                    <FooterNavItem text={'PERSONAL STATS'} link="/dashboard" />
+                    <FooterNavItem text={'PERSONAL STATS'} link="/dashboard/personalstats" />
                 </LinkStyled>
                 <LinkStyled className={activeLink === "deposit" ? "active" : ""}>
                     <img src="/assets/images/dashboard/sidebar/deposit.svg" alt="..." />

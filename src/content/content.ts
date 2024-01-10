@@ -345,7 +345,7 @@ export const CONTENT = {
                 },
                 "yellowButton2": {
                     "span1": "Upline Partner Wallet",
-                    "span2": ""
+                    "span2": "TEvG6VpgitzigWyqvhmGcihLf6WBEM1Q6s"
                 },
                 "blackButton2": {
                     "span1": "Your Referral Link",

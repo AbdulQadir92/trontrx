@@ -63,7 +63,7 @@ const Navbar = () => {
                         </div>
                         <div onClick={toggleNavbar}>
                             <img src="/assets/images/navbar/dashboard-icon.svg" alt="..." />
-                            <NavItem text={'DASHBOARD'} link="/dashboard" />
+                            <NavItem text={'DASHBOARD'} link="/dashboard/personalstats" />
                         </div>
                     </ul>
                 </MobileNavbar>

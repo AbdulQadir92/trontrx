@@ -1,3 +1,4 @@
+"use client"
 import { HeaderStyled, DashboardLogo, DashboardSection, HomeButton } from "@/styles/pages/components/dashboard/Header.styled"
 import { CONTENT as content } from '@/content/content'
 import React from "react"
@@ -5,12 +6,13 @@ import Link from 'next/link'
 import { useRouter } from "next/navigation"
 
 
-interface HeaderProps {
-    toggleSidebar: Function
-}
-
-const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
+const Header = () => {
     const router = useRouter();
+
+    const toggleSidebarMobile = () => {
+        const sidebarMobile = document.querySelector('#sidebarMobile') as HTMLDivElement;
+        sidebarMobile.classList.toggle('show');
+    }
 
     return (
         <HeaderStyled>
@@ -35,7 +37,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
                     </span>
                 </Link>
             </HomeButton>
-            <img src="/assets/images/dashboard/header/menu.svg" onClick={() => toggleSidebar()} />
+            <img src="/assets/images/dashboard/header/menu.svg" onClick={() => toggleSidebarMobile()} />
         </HeaderStyled>
     )
 }

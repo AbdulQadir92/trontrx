@@ -22,11 +22,19 @@ export const WithdrawalCardStyled = styled.div`
     }
 
     @media (max-width: 768px) {
+        width: calc(100% - 25px);
         min-height: 730px;
     }
 
     @media (max-width: 600px) {
+        width: calc(100% - 15px);
         padding-bottom: 30px;
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    @media (max-width: 300px) {
+        width: calc(100% - 10px);
     }
 `
 

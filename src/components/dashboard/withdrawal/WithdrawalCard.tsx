@@ -6,8 +6,6 @@ import {
 } from "@/styles/pages/components/dashboard/withdrawal/WithdrawalCard.styled"
 import { CONTENT as content } from '@/content/content'
 import { useState, useEffect } from "react"
-// import Timer from './Timer'
-// import timer from './Timer'
 import Timer from "./Timer"
 
 

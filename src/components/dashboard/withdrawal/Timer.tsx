@@ -91,44 +91,44 @@ const TimerBox = styled.div`
 `
 
 interface TimerInterface {
-    endTs: number,
-    callback: () => void
+  endTs: number,
+  callback: () => void
 }
 // @ts-ignore
 const Timer: React.FC<TimerInterface> = ({ endTs, callback }) => {
-    const time = new Date();
+  const time = new Date();
 
-    const { seconds, minutes, hours, days } = useTimer({
-        // expiryTimestamp: new Date(endTs),
-        expiryTimestamp: new Date(time.setMinutes(time.getMinutes() + endTs)),
-        onExpire: () => { },
-    });
+  const { seconds, minutes, hours, days } = useTimer({
+    // expiryTimestamp: new Date(endTs),
+    expiryTimestamp: new Date(time.setMinutes(time.getMinutes() + endTs)),
+    onExpire: () => { },
+  });
 
-    useEffect(() => {
-        if (seconds === 0 && minutes === 0 && hours === 0) {
-            callback();
-        }
-    })
+  useEffect(() => {
+    if (seconds === 0 && minutes === 0 && hours === 0) {
+      callback();
+    }
+  })
 
-    return (
-        <TimerBoxContainerWrapper>
-            <img src="/assets/images/dashboard/withdrawal/timer.svg" alt="..." />
-            <TimerBoxContainer>
-                <TimerBox>
-                    <p>{days > 0 ? ((24 * days) + hours).toString().padStart(2, '0') : hours.toString().padStart(2, '0')}</p>
-                    <span>Hour</span>
-                </TimerBox>
-                <TimerBox>
-                    <p>{minutes.toString().padStart(2, '0')}</p>
-                    <span>Minutes</span>
-                </TimerBox>
-                <TimerBox>
-                    <p>{seconds.toString().padStart(2, '0')}</p>
-                    <span>Seconds</span>
-                </TimerBox>
-            </TimerBoxContainer>
-        </TimerBoxContainerWrapper>
-    );
+  return (
+    <TimerBoxContainerWrapper>
+      <img src="/assets/images/dashboard/withdrawal/timer.svg" alt="..." />
+      <TimerBoxContainer>
+        <TimerBox>
+          <p>{days > 0 ? ((24 * days) + hours).toString().padStart(2, '0') : hours.toString().padStart(2, '0')}</p>
+          <span>Hours</span>
+        </TimerBox>
+        <TimerBox>
+          <p>{minutes.toString().padStart(2, '0')}</p>
+          <span>Minutes</span>
+        </TimerBox>
+        <TimerBox>
+          <p>{seconds.toString().padStart(2, '0')}</p>
+          <span>Seconds</span>
+        </TimerBox>
+      </TimerBoxContainer>
+    </TimerBoxContainerWrapper>
+  );
 };
 
 export default Timer

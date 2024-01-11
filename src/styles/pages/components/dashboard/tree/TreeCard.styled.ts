@@ -8,7 +8,7 @@ export const TreeCardStyled = styled.div`
     border-radius: 24.5px;
     text-align: center;
     border: 5px solid #FBBD18;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 30px;
     padding-bottom: 30px;
 
@@ -25,11 +25,11 @@ export const TreeCardStyled = styled.div`
 
     @media (max-width: 768px) {
         min-height: 880px;
-        margin: 30px 15px 30px 0;
+        margin: 29px 15px 30px 0;
     }
 
     @media (max-width: 300px) {
-        margin: 30px 10px 30px 0;
+        margin: 29px 10px 30px 0;
     }
 `
 

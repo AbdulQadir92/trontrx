@@ -2,15 +2,15 @@ import styled from "styled-components"
 import { YellowButton1 } from "../currentStats/InfoCard.styled"
 
 export const WithdrawalCardStyled = styled.div`
-    width: 95%;
+    width: 96%;
     max-width: 1038px;
     min-height: 1495px;;
     background: #FFFFFF;
     border-radius: 24.5px;
     text-align: center;
     border: 5px solid #FBBD18;
-    /* margin-left: -23px; */
     margin-bottom: 21px;
+    margin-top: 10px;
 
     @media (max-width: 1200px) {
         min-height: 840px;

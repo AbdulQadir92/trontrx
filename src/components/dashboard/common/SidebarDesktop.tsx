@@ -28,10 +28,10 @@ const SidebarDesktop: React.FC<SidebarMobileProps> = ({ activeLink }) => {
                     <img src="/assets/images/dashboard/sidebar/tree.svg" alt="..." />
                     <FooterNavItem text={'TREE'} link="/dashboard/tree" />
                 </LinkStyled>
-                <LinkStyled className={activeLink === "contractStats" ? "active" : ""}>
+                {/* <LinkStyled className={activeLink === "contractStats" ? "active" : ""}>
                     <img src="/assets/images/dashboard/sidebar/currentStats.svg" alt="..." />
                     <FooterNavItem text={'CONTRACT STATS'} link="/dashboard/contractstats" />
-                </LinkStyled>
+                </LinkStyled> */}
             </ul>
         </SidebarDesktopStyled>
     )

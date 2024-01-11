@@ -34,10 +34,10 @@ const SidebarMobile: React.FC<SidebarMobileProps> = ({ activeLink }) => {
                     <img src="/assets/images/dashboard/sidebar/tree.svg" alt="..." />
                     <FooterNavItem text={'TREE'} link="/dashboard/tree" isSidebar={true} />
                 </div>
-                <div className={activeLink === "contractStats" ? "active" : ""}>
+                {/* <div className={activeLink === "contractStats" ? "active" : ""}>
                     <img src="/assets/images/dashboard/sidebar/currentStats.svg" alt="..." />
                     <FooterNavItem text={'CONTRACT STATS'} link="/dashboard/contractstats" isSidebar={true} />
-                </div>
+                </div> */}
             </ul>
             <HomeButtonMobile>
                 <button type="button">
